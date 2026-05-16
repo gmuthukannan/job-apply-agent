@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 11pt;
+    color: #1a1a1a;
+    line-height: 1.7;
+    padding: 22mm 20mm;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .sender {
+    margin-bottom: 28px;
+  }
+  .sender-name {
+    font-size: 16pt;
+    font-weight: 700;
+    font-family: 'Arial', sans-serif;
+    color: #1a2d4f;
+  }
+  .sender-contact {
+    font-size: 9.5pt;
+    color: #555;
+    margin-top: 4px;
+    font-family: 'Arial', sans-serif;
+  }
+  .sender-contact a { color: #1a4a8a; text-decoration: none; }
+
+  .date {
+    font-size: 10.5pt;
+    color: #444;
+    margin-bottom: 20px;
+  }
+
+  .recipient {
+    margin-bottom: 22px;
+    font-size: 10.5pt;
+  }
+  .recipient .company { font-weight: 700; }
+
+  .salutation {
+    margin-bottom: 14px;
+    font-size: 11pt;
+  }
+
+  .body p {
+    margin-bottom: 14px;
+    font-size: 11pt;
+    text-align: justify;
+  }
+
+  .closing {
+    margin-top: 28px;
+  }
+  .closing-word {
+    display: block;
+    margin-bottom: 36px;
+  }
+  .sig-name {
+    font-weight: 700;
+    font-family: 'Arial', sans-serif;
+    font-size: 11pt;
+    color: #1a2d4f;
+  }
+
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: #1a2d4f;
+    margin-bottom: 24px;
+  }
+</style>
+</head>
+<body>
+
+<div class="sender">
+  <div class="sender-name">{{ personal.full_name }}</div>
+  <div class="sender-contact">
+    {{ personal.location }} &nbsp;·&nbsp;
+    {{ personal.phone }} &nbsp;·&nbsp;
+    <a href="mailto:{{ personal.email }}">{{ personal.email }}</a> &nbsp;·&nbsp;
+    <a href="{{ personal.linkedin }}">LinkedIn</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="date">{{ date }}</div>
+
+<div class="recipient">
+  <div><strong>Hiring Team</strong></div>
+  <div class="company">{{ company }}</div>
+</div>
+
+<div class="salutation">Dear Hiring Team,</div>
+
+<div class="body">
+  {% for para in paragraphs %}
+  <p>{{ para }}</p>
+  {% endfor %}
+</div>
+
+<div class="closing">
+  <span class="closing-word">Sincerely,</span>
+  <div class="sig-name">{{ personal.full_name }}</div>
+  <div style="font-size:9.5pt;color:#555;margin-top:4px;font-family:Arial,sans-serif;">
+    <a href="{{ personal.linkedin }}" style="color:#1a4a8a;text-decoration:none;">LinkedIn</a>
+    &nbsp;·&nbsp;
+    <a href="{{ personal.github }}" style="color:#1a4a8a;text-decoration:none;">GitHub</a>
+  </div>
+</div>
+
+</body>
+</html>

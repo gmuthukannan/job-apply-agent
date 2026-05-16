@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 10.5pt;
+    color: #1a1a1a;
+    line-height: 1.45;
+    padding: 18mm 16mm;
+  }
+
+  /* ── Header ── */
+  .header { text-align: center; margin-bottom: 14px; }
+  .name {
+    font-size: 22pt;
+    font-weight: 700;
+    color: #1a2d4f;
+    letter-spacing: 0.5px;
+  }
+  .tagline {
+    font-size: 10pt;
+    color: #456;
+    margin: 3px 0 6px;
+    font-style: italic;
+  }
+  .contact {
+    font-size: 9pt;
+    color: #444;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 14px;
+  }
+  .contact a { color: #1a4a8a; text-decoration: none; }
+
+  /* ── Section ── */
+  .section { margin-bottom: 12px; }
+  .section-title {
+    font-size: 11pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1a2d4f;
+    border-bottom: 1.5px solid #1a2d4f;
+    padding-bottom: 2px;
+    margin-bottom: 7px;
+    letter-spacing: 1.2px;
+  }
+
+  /* ── Summary ── */
+  .summary { font-size: 10pt; color: #222; }
+
+  /* ── Skills ── */
+  .skills-table { width: 100%; border-collapse: collapse; }
+  .skills-table td {
+    font-size: 9.5pt;
+    padding: 2px 6px 2px 0;
+    vertical-align: top;
+    width: 50%;
+  }
+  .skill-category { font-weight: 700; color: #1a2d4f; min-width: 110px; display: inline-block; }
+
+  /* ── Experience ── */
+  .job { margin-bottom: 10px; }
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+  .job-title { font-weight: 700; font-size: 11pt; color: #1a2d4f; }
+  .job-company { font-size: 10pt; color: #333; }
+  .job-period {
+    font-size: 9pt;
+    color: #666;
+    white-space: nowrap;
+  }
+  .job-location { font-size: 9pt; color: #888; }
+  ul.bullets { padding-left: 14px; margin-top: 4px; }
+  ul.bullets li { font-size: 10pt; margin-bottom: 3px; color: #222; }
+  ul.bullets li::marker { color: #1a4a8a; }
+
+  /* ── Certifications ── */
+  .cert-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+  }
+  .cert { font-size: 9.5pt; color: #222; }
+  .cert::before { content: "✦ "; color: #1a4a8a; }
+
+  /* ── Education ── */
+  .edu-line { font-size: 10pt; }
+  .edu-degree { font-weight: 700; color: #1a2d4f; }
+
+  /* ── Page break control ── */
+  .job { page-break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="name">{{ personal.full_name }}</div>
+  <div class="tagline">{{ tagline }}</div>
+  <div class="contact">
+    <span>{{ personal.location }}</span>
+    <span>{{ personal.phone }}</span>
+    <a href="mailto:{{ personal.email }}">{{ personal.email }}</a>
+    <a href="{{ personal.linkedin }}">LinkedIn</a>
+    <a href="{{ personal.github }}">GitHub</a>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="section">
+  <div class="section-title">Professional Summary</div>
+  <div class="summary">{{ summary }}</div>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+  <div class="section-title">Technical Skills</div>
+  <table class="skills-table">
+    {% for row in skills_rows %}
+    <tr>
+      {% for item in row %}
+      <td><span class="skill-category">{{ item.category }}:</span> {{ item.items }}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section">
+  <div class="section-title">Professional Experience</div>
+  {% for role in experience %}
+  <div class="job">
+    <div class="job-header">
+      <div>
+        <span class="job-title">{{ role.title }}</span>
+        <span style="color:#aaa;margin:0 6px">|</span>
+        <span class="job-company">{{ role.company }}</span>
+      </div>
+      <div>
+        <span class="job-period">{{ role.period }}</span>
+        <span style="color:#aaa;margin:0 4px">·</span>
+        <span class="job-location">{{ role.location }}</span>
+      </div>
+    </div>
+    <ul class="bullets">
+      {% for bullet in role.bullets %}
+      <li>{{ bullet }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- CERTIFICATIONS -->
+<div class="section">
+  <div class="section-title">Certifications</div>
+  <div class="cert-grid">
+    {% for cert in certifications %}
+    <span class="cert">{{ cert }}</span>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- EDUCATION -->
+<div class="section">
+  <div class="section-title">Education</div>
+  <div class="edu-line">
+    <span class="edu-degree">{{ education.degree }}</span>
+    <span style="color:#888"> — </span>{{ education.university }}
+  </div>
+</div>
+
+</body>
+</html>

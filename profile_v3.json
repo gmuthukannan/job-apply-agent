@@ -1,0 +1,235 @@
+{
+  "personal": {
+    "full_name": "Muthukannan Gomathisamynathan",
+    "location": "Surrey, BC, Canada",
+    "phone": "249-876-7242",
+    "email": "gmuthukannan@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/gmuthukannan/",
+    "github": "https://github.com/gmuthukannan/",
+    "Pronouns": "He/him/his",
+    "Gender": "Male",
+    "Race": "Asian",
+    "Veteran Status": "Non-Veteran",
+    "Disability Status": "No Disability",
+    "Concent to Background Check": "Yes",
+    "Concent to contact": "Yes"
+  },
+
+  "preferred_tone": "Concise, technical, impact-driven, systems-thinking",
+
+  "summary": "Senior Data Engineer with 14+ years of experience building scalable ETL/ELT pipelines, Medallion architectures, and HIPAA-compliant healthcare data systems. Strong expertise in SQL optimization, SSIS, DataStage, Databricks, Microsoft Fabric, and near real-time data processing. Recent hands-on experience with LLMs, RAG systems, prompt engineering, and AI workflow optimization.",
+
+  "career_tags": [
+    "healthcare data",
+    "etl architecture",
+    "data warehousing",
+    "hipaa compliance",
+    "llm applications",
+    "rag systems",
+    "scrum leadership",
+    "automation engineering",
+    "ai ops",
+    "data engineering"
+  ],
+
+  "core_strengths": [
+    "Designing large-scale data pipelines (batch and near real-time)",
+    "Healthcare domain expertise (HIPAA, X12, ICD-10, CMS, FACETS)",
+    "SQL and database performance optimization",
+    "ETL/ELT architecture and Medallion architecture",
+    "LLM application development (RAG, prompt engineering, evals)",
+    "Automation using UNIX scripting and schedulers",
+    "Scrum leadership and cross-team coordination"
+  ],
+
+  "skills_master": {
+    "languages": [".Net", "Python", "PL/SQL", "Java", "UNIX Shell Scripting"],
+    "databases": ["SQL Server", "Sybase", "PostgreSQL", "Oracle", "MS Access"],
+    "big_data": ["PySpark", "Apache Kafka"],
+    "platforms": ["Databricks", "Microsoft Fabric", "DataStage", "WTX"],
+    "orchestration": ["Apache Airflow", "SSIS", "Tidal Scheduler"],
+    "architecture": ["Medallion Architecture", "Data Warehousing", "ETL/ELT Pipelines"],
+    "ai_llm": ["RAG Pipelines", "LangChain", "HuggingFace Embeddings", "Vector Search", "Prompt Engineering", "Model Evaluation", "Synthetic Data Generation", "Instruction Fine-Tuning"],
+    "domain": ["HIPAA", "EDI X12", "ICD-10", "FACETS", "834 Enrollment", "CMS Data Ingestion"],
+    "tools": ["JIRA", "Confluence", "Postman", "SoapUI", "Crystal Reports"]
+  },
+
+  "evidence_stories": [
+    {
+      "id": "rag_pipeline",
+      "headline": "Built production-grade RAG chatbot from scratch",
+      "summary": "Built a production-grade RAG chatbot POC with ingestion, chunking, embeddings, indexing, and full prompt pipeline for domain-grounded Q&A with source attribution.",
+      "tags": ["llm", "rag", "vector-search", "ai-ops"],
+      "metrics": {}
+    },
+    {
+      "id": "prompt_optimization",
+      "headline": "Reduced LLM prompt size 98%, cut latency 40%",
+      "summary": "Applied instruction fine-tuning to compress LLM prompts from 1800 to 30 characters, reducing model latency (TTFT) by ~40% and drastically shrinking token footprint at scale.",
+      "tags": ["llm", "optimization", "prompt-engineering", "ai-ops"],
+      "metrics": {
+        "prompt_size_before_chars": 1800,
+        "prompt_size_after_chars": 30,
+        "latency_reduction_percent": 40
+      }
+    },
+    {
+      "id": "schema_agnostic_etl",
+      "headline": "Schema-agnostic ETL cut onboarding effort by 90%",
+      "summary": "Designed a schema-agnostic ETL pipeline for flat file to DB ingestion. New file formats could be onboarded without code changes, eliminating manual engineering intervention.",
+      "tags": ["etl", "automation", "architecture"],
+      "metrics": {
+        "onboarding_effort_reduction_percent": 90
+      }
+    },
+    {
+      "id": "healthcare_transaction_system",
+      "headline": "1M+ EDI X12 transactions/month, high availability",
+      "summary": "Maintained a near-real-time, high-availability healthcare pipeline processing over 1M EDI X12 transactions monthly under strict HIPAA constraints.",
+      "tags": ["healthcare", "etl", "reliability", "hipaa"],
+      "metrics": {
+        "transactions_per_month": 1000000
+      }
+    },
+    {
+      "id": "large_scale_ingestion",
+      "headline": "400GB state-level healthcare ingestion pipeline",
+      "summary": "Built SSIS pipeline ingesting 400GB of state-level healthcare datasets into a structured warehouse with cleansing, SCD logic, and conformed dimensions in Microsoft Fabric.",
+      "tags": ["etl", "data-warehouse", "ssis", "healthcare"],
+      "metrics": {
+        "data_volume_gb": 400
+      }
+    },
+    {
+      "id": "enrollment_reengineering",
+      "headline": "Re-engineered enrollment system; docs became system blueprint",
+      "summary": "Led a team of 10 to re-engineer the enrollment system from .Net to Sybase. Authored framework documentation that was later used as the blueprint for a full system rewrite.",
+      "tags": ["architecture", "leadership", "healthcare"],
+      "metrics": {
+        "team_size": 10
+      }
+    }
+  ],
+
+  "work_history": [
+    {
+      "company": "Cognizant Technology Solutions",
+      "title": "Sr Product Specialist",
+      "location": "Canada",
+      "start": "2022-09",
+      "end": "present",
+      "tags": ["healthcare", "etl", "llm", "data-warehouse", "ai-ops"],
+      "skills_used": ["SQL Server", "SSIS", "Microsoft Fabric", "LangChain", "Vector Search", "LLMs"],
+      "evidence_links": ["rag_pipeline", "healthcare_transaction_system", "large_scale_ingestion"],
+      "responsibilities": [
+        "Designed and optimized SQL Server stored procedures for OLTP healthcare transactions",
+        "Built a production-grade RAG chatbot POC using LLMs, LangChain, HuggingFace embeddings, and vector search",
+        "Maintained a near-real-time high-availability system processing over 1M EDI X12 transactions monthly under HIPAA",
+        "Architected a 400GB batch ingestion pipeline using SSIS into a structured healthcare data warehouse",
+        "Developed end-to-end data pipelines in Microsoft Fabric with SCD-based conformed dimensions",
+        "Built reporting pipelines and provider usage dashboards for operational visibility"
+      ]
+    },
+    {
+      "company": "M2M Tech / Upskill Canada",
+      "title": "AI/ML Work Integrated Learning (DataTalent Program)",
+      "location": "Canada",
+      "start": "2025-10",
+      "end": "2026-02",
+      "tags": ["llm", "prompt-engineering", "evaluation", "ai-ops"],
+      "skills_used": ["LLMs", "Prompt Engineering", "Model Evaluation", "Synthetic Data Generation"],
+      "evidence_links": ["prompt_optimization"],
+      "responsibilities": [
+        "Worked on LLM implementation for an ASL translation application",
+        "Applied Chain-of-Thought prompting and performed model evaluations across multiple LLMs",
+        "Generated synthetic datasets for training and testing due to scarcity of ASL data",
+        "Performed instruction fine-tuning to compress prompts from 1800 to 30 characters"
+      ]
+    },
+    {
+      "company": "CitiusTech Healthcare",
+      "title": "Solution Architect",
+      "location": "India",
+      "start": "2021-06",
+      "end": "2022-07",
+      "tags": ["leadership", "healthcare", "architecture", "scrum"],
+      "skills_used": ["Scrum", "Kanban", "Healthcare Systems", "Architecture"],
+      "evidence_links": [],
+      "responsibilities": [
+        "Led iterative delivery of a client-owned healthcare product as Solution Architect",
+        "Acted as Scrum Master for three parallel teams, removing technical and functional impediments",
+        "Coached teams on HIPAA compliance, Scrum, and Kanban practices",
+        "Improved delivery predictability and team process maturity"
+      ]
+    },
+    {
+      "company": "CNSI",
+      "title": "Senior System Analyst",
+      "location": "India",
+      "start": "2019-09",
+      "end": "2021-05",
+      "tags": ["etl", "automation", "healthcare"],
+      "skills_used": ["UNIX", "PL/SQL", "Java", "ETL"],
+      "evidence_links": ["schema_agnostic_etl"],
+      "responsibilities": [
+        "Developed and managed change requests in Java and PL/SQL healthcare systems",
+        "Automated daily operational reports using UNIX scripting",
+        "Designed a schema-agnostic ETL pipeline for flat file to DB ingestion, reducing new file onboarding effort by 90%"
+      ]
+    },
+    {
+      "company": "HCL Technologies",
+      "title": "Senior Developer",
+      "location": "India",
+      "start": "2017-11",
+      "end": "2019-08",
+      "tags": ["automation", "scrum", "etl"],
+      "skills_used": ["Sybase", "UNIX", "WTX", "Scrum"],
+      "evidence_links": [],
+      "responsibilities": [
+        "Led development of client change requests across Sybase, UNIX, and WTX systems",
+        "Automated technical reporting using UNIX scripts, reducing delivery time significantly",
+        "Redesigned dynamic processes to accommodate changing client requirements",
+        "Acted as Scrum Master and performed peer code reviews to improve code quality"
+      ]
+    },
+    {
+      "company": "Cognizant Technology Solutions",
+      "title": "Product Specialist",
+      "location": "India",
+      "start": "2011-10",
+      "end": "2017-11",
+      "tags": ["healthcare", "etl", "architecture", "leadership"],
+      "skills_used": [".Net", "Sybase", "DataStage", "FACETS"],
+      "evidence_links": ["enrollment_reengineering"],
+      "responsibilities": [
+        "Led a team of 10 engineers for enrollment system re-engineering from .Net to Sybase",
+        "Authored framework documentation later used as blueprint for full system rewrite",
+        "Remediated systems for ICD-10 compliance mandates",
+        "Built claims and 834 enrollment processing systems using FACETS",
+        "Worked with DataStage teams to deliver outbound data warehouse pipelines"
+      ]
+    }
+  ],
+
+  "certifications": [
+    "Certified Scrum Professional – Scrum Master (CSP-SM)",
+    "Databricks Associate Data Engineer",
+    "Microsoft Fabric Data Engineer (DP-700)",
+    "Apache Airflow Fundamentals",
+    "GCP ACE Training"
+  ],
+
+  "education": {
+    "degree": "B.Tech in Biotechnology",
+    "university": "Anna University, Chennai, India"
+  },
+
+  "stories_for_llm": [
+    "Built a RAG chatbot from scratch with ingestion, chunking, embeddings, and prompt pipelines — grounded answers with source attribution",
+    "Compressed LLM prompts from 1800 to 30 characters via instruction fine-tuning, reducing latency by ~40%",
+    "Designed schema-agnostic ETL framework reducing new file onboarding effort by 90%",
+    "Re-engineered enrollment system and created documentation later used as the blueprint for a full system rewrite",
+    "Maintained mission-critical healthcare pipelines processing 1M+ EDI X12 transactions monthly under HIPAA"
+  ]
+}
